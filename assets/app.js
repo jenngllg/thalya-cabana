@@ -6,20 +6,20 @@
   const STORAGE_KEY = "thalya-cabana-language";
   const BISTROT_WIDE_SCREEN = window.matchMedia("(min-width: 760px)");
   const REDUCED_MOTION = window.matchMedia("(prefers-reduced-motion: reduce)");
-  const LUCIDE_ICON_MAP = {
-    sandwich: "sandwich",
-    bowl: "soup",
-    toast: "hamburger",
-    wrap: "wheat",
-    panini: "sandwich",
-    salad: "salad",
-    fries: "carrot",
-    plus: "circle-plus",
-    dessert: "cake-slice",
-    topping: "ice-cream-bowl",
-    "hot-drink": "coffee",
-    "cold-drink": "cup-soda",
-    breakfast: "croissant"
+  const CATEGORY_ICON_MAP = {
+    sandwich: "lucide/sandwich",
+    bowl: "category-icons/bowl",
+    toast: "lucide/hamburger",
+    wrap: "category-icons/wrap",
+    panini: "category-icons/panini",
+    salad: "lucide/salad",
+    fries: "lucide/carrot",
+    plus: "lucide/circle-plus",
+    dessert: "lucide/cake-slice",
+    topping: "lucide/ice-cream-bowl",
+    "hot-drink": "lucide/coffee",
+    "cold-drink": "lucide/cup-soda",
+    breakfast: "lucide/croissant"
   };
   const allowed = I18N.locales.map((locale) => locale.code);
   let language = getSavedLanguage();
@@ -68,9 +68,9 @@
     return `<svg class="${className || "section-icon"}" aria-hidden="true"><use href="assets/icons.svg#${name}"></use></svg>`;
   }
 
-  function lucideIcon(name, className) {
-    const fileName = LUCIDE_ICON_MAP[name] || "sandwich";
-    return `<span class="${className || "section-icon"} lucide-icon" style="--lucide-icon: url('lucide/${fileName}.svg')" aria-hidden="true"></span>`;
+  function categoryIcon(name, className) {
+    const fileName = CATEGORY_ICON_MAP[name] || "lucide/sandwich";
+    return `<span class="${className || "section-icon"} category-icon" style="--category-icon: url('${fileName}.svg')" aria-hidden="true"></span>`;
   }
 
   function translateStaticPage() {
@@ -222,7 +222,7 @@
         section.id = category.id;
         const heading = document.createElement("div");
         heading.className = "bistrot-section-heading";
-        heading.innerHTML = `${lucideIcon(category.icon)}<div class="accordion-label"><h2 class="accordion-title">${categoryTitle(category)}</h2>${importantNote}</div>`;
+        heading.innerHTML = `${categoryIcon(category.icon)}<div class="accordion-label"><h2 class="accordion-title">${categoryTitle(category)}</h2>${importantNote}</div>`;
         section.append(heading, createBistrotContent(category));
         root.appendChild(section);
         return;
@@ -233,7 +233,7 @@
       details.id = category.id;
       details.open = index === 0;
       const summary = document.createElement("summary");
-      summary.innerHTML = `${lucideIcon(category.icon)}<span class="accordion-label"><span class="accordion-title">${categoryTitle(category)}</span>${importantNote}</span><span class="accordion-arrow" aria-hidden="true"></span>`;
+      summary.innerHTML = `${categoryIcon(category.icon)}<span class="accordion-label"><span class="accordion-title">${categoryTitle(category)}</span>${importantNote}</span><span class="accordion-arrow" aria-hidden="true"></span>`;
       details.addEventListener("toggle", () => {
         if (!details.open || BISTROT_WIDE_SCREEN.matches) return;
         setActiveBistrotCategory(category.id);
