@@ -2,16 +2,15 @@
 
 Menu mobile multilingue du kiosque Thalya Cabana à Cannes. Le projet est un site statique sans framework, dépendance d’exécution, compilation ni ressource distante.
 
-## Propositions
+## Structure
 
-- `index.html` : accueil comparateur des trois directions visuelles.
-- `riviera.html` : version Riviera éditoriale avec navigation par onglets.
-- `bistrot.html` : version Bistrot moderne avec rubriques repliables.
-- `illustre.html` : version illustrée avec raccourcis visuels.
+- `index.html` : menu Bistrot moderne, page unique du site.
+- `assets/menu-data.js` : catégories, produits et prix.
+- `assets/i18n.js` : interface et traductions en six langues.
+- `assets/app.js` : changement de langue, navigation et rubriques mobiles.
+- `assets/base.css` et `assets/bistrot.css` : styles mobile-first.
 
-Les données du menu, les prix et les traductions sont mutualisés dans `assets/menu-data.js` et `assets/i18n.js`.
-
-La version Bistrot utilise une sélection d’icônes Lucide stockées localement dans `assets/lucide/`. Leur licence ISC est incluse dans `assets/lucide/LICENSE` ; aucun CDN ni paquet à installer n’est utilisé.
+Les icônes Lucide sont stockées localement dans `assets/lucide/`. Leur licence ISC est incluse dans `assets/lucide/LICENSE` ; aucun CDN ni paquet à installer n’est utilisé.
 
 ## Prévisualisation locale
 
@@ -21,4 +20,4 @@ Depuis la racine du projet :
 node dev-server.cjs
 ```
 
-Ouvrir ensuite `http://localhost:8000/`. Le petit serveur utilise uniquement les modules natifs de Node.js : aucun paquet n’est à installer.
+Ouvrir ensuite `http://localhost:8000/`. Le serveur utilise uniquement les modules natifs de Node.js.
