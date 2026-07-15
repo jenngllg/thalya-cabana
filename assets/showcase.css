@@ -1,0 +1,29 @@
+body { background: #e9eee7; }
+.showcase-header { position: relative; }
+.showcase-main { width: min(1180px, 100%); margin: 0 auto; padding: 48px 16px 80px; }
+.showcase-intro { max-width: 780px; }
+.showcase-intro .eyebrow { color: var(--forest); }
+.showcase-intro h1 { margin: 0; color: var(--forest); font-family: var(--serif); font-size: clamp(2.8rem, 12vw, 6.4rem); font-weight: 400; line-height: .92; letter-spacing: -.03em; }
+.showcase-intro > p:last-child { max-width: 630px; margin: 22px 0 0; color: #456158; font-size: clamp(1rem, 3vw, 1.2rem); }
+.concept-grid { display: grid; gap: 22px; margin-top: 48px; }
+.concept-card { --accent: var(--sage); position: relative; display: flex; min-height: 480px; flex-direction: column; overflow: hidden; border: 1px solid rgba(21,63,56,.12); border-radius: 28px; color: var(--ink); background: var(--paper); box-shadow: var(--shadow); }
+.concept-preview { position: relative; min-height: 245px; padding: 30px; overflow: hidden; background: var(--cream); }
+.concept-preview::after { content: ""; position: absolute; width: 190px; height: 190px; right: -45px; top: -55px; border: 1px solid var(--accent); border-radius: 50%; opacity: .28; }
+.mini-brand { position: relative; z-index: 1; color: var(--forest); font-family: var(--serif); font-size: 2.3rem; line-height: .8; letter-spacing: .12em; text-transform: uppercase; }
+.mini-brand span { display: block; }
+.mini-lines { position: absolute; inset: auto 30px 28px; display: grid; gap: 9px; }
+.mini-lines i { display: block; height: 7px; border-radius: 10px; background: color-mix(in srgb, var(--accent), transparent 35%); }
+.mini-lines i:nth-child(2) { width: 76%; }.mini-lines i:nth-child(3) { width: 88%; }
+.concept-card.bistrot { --accent: #294f44; }
+.concept-card.bistrot .concept-preview { color: white; background: #294f44; }
+.concept-card.bistrot .mini-brand { color: white; font-family: var(--sans); font-weight: 900; letter-spacing: -.04em; }
+.concept-card.bistrot .mini-lines i { height: 13px; border-radius: 3px; background: #dce5d8; }
+.concept-card.illustrated { --accent: var(--coral); }
+.preview-doodle { position: absolute; right: 18px; bottom: 30px; width: 130px; height: 130px; color: var(--coral); fill: none; stroke: currentColor; stroke-width: 1.6; }
+.concept-copy { display: flex; flex: 1; flex-direction: column; padding: 26px; }
+.concept-number { color: var(--sage); font-size: .68rem; font-weight: 900; letter-spacing: .18em; }
+.concept-copy h2 { margin: 10px 0 8px; color: var(--forest); font-family: var(--serif); font-size: 2rem; font-weight: 500; }
+.concept-copy p { margin: 0; color: var(--muted); font-size: .92rem; }
+.concept-link { display: inline-flex; align-items: center; justify-content: center; min-height: 50px; margin-top: auto; padding: 12px 20px; border-radius: 999px; color: white; background: var(--forest); font-size: .76rem; font-weight: 800; letter-spacing: .08em; text-decoration: none; text-transform: uppercase; }
+.concept-link::after { content: "↗"; margin-left: 9px; font-size: 1rem; }
+@media (min-width: 760px) { .showcase-main { padding-inline: 24px; }.concept-grid { grid-template-columns: repeat(3, minmax(0,1fr)); }.concept-card { min-height: 550px; } }

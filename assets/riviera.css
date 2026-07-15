@@ -1,0 +1,12 @@
+body.variant-riviera { background: var(--cream); }
+.variant-riviera .site-header { background: color-mix(in srgb, var(--cream), transparent 7%); }
+.variant-riviera .menu-hero::before { background: radial-gradient(circle at 50% 5%, rgba(120,148,126,.24), transparent 42%), linear-gradient(165deg, transparent 55%, rgba(216,120,97,.08)); }
+.category-tabs-wrap { position: sticky; top: 0; z-index: 20; padding: 8px 0; background: rgba(246,241,232,.94); backdrop-filter: blur(14px); border-block: 1px solid var(--line); }
+.category-tabs { display: flex; width: min(1120px, 100%); gap: 7px; margin: 0 auto; padding: 2px 14px; overflow-x: auto; scrollbar-width: none; }
+.category-tabs::-webkit-scrollbar { display: none; }
+.category-tab { flex: 0 0 auto; min-height: 44px; padding: 10px 17px; border: 1px solid var(--line); border-radius: 999px; color: var(--forest); background: var(--paper); font-size: .72rem; font-weight: 800; text-decoration: none; white-space: nowrap; }
+.category-tab[aria-current="true"] { color: white; border-color: var(--forest); background: var(--forest); }
+.variant-riviera .menu-shell { padding-top: 28px; }
+.variant-riviera .menu-grid { gap: 16px; }
+.variant-riviera .menu-section { margin-bottom: 16px; padding: 24px 20px; border: 1px solid var(--line); border-radius: 24px; background: rgba(255,253,248,.74); box-shadow: 0 10px 30px rgba(21,63,56,.045); }
+@media (min-width: 800px) { .variant-riviera .menu-section { margin: 0; padding: 30px; }.variant-riviera .menu-grid { gap: 22px; } }

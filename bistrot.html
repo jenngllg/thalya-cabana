@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#173f35">
+  <title>Thalya Cabana · Bistrot moderne</title>
+  <link rel="stylesheet" href="assets/base.css">
+  <link rel="stylesheet" href="assets/bistrot.css">
+  <script defer src="assets/i18n.js"></script>
+  <script defer src="assets/menu-data.js"></script>
+  <script defer src="assets/app.js"></script>
+</head>
+<body class="variant-bistrot" data-variant="bistrot">
+  <a class="skip-link" href="#main" data-i18n="skip">Aller au contenu</a>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Thalya Cabana, accueil" data-i18n-aria="homeLabel"><strong>Thalya<br>Cabana</strong><span data-i18n="brandLine">Cannes · face à la mer</span></a>
+    <div class="language-switcher" data-language-switcher aria-label="Choix de la langue" data-i18n-aria="languageChoice"></div>
+  </header>
+  <a class="back-link" href="index.html" data-i18n="back">Voir les trois propositions</a>
+  <main id="main">
+    <section class="menu-hero"><div class="menu-hero-inner">
+      <p class="eyebrow" data-i18n="menu">La carte</p>
+      <h1><span>Thalya</span><span>Cabana</span></h1>
+      <p class="menu-hero-tagline" data-i18n="madeFresh">Fait maison &amp; produits frais</p>
+      <p class="menu-hero-note" data-i18n="facingSea">Face à la mer</p>
+    </div></section>
+    <nav class="bistrot-category-nav" data-i18n-aria="categories">
+      <div class="bistrot-category-tabs" data-bistrot-category-tabs></div>
+    </nav>
+    <div class="menu-shell"><div class="accordion-menu" data-menu-root></div></div>
+  </main>
+  <footer class="site-footer">
+    <p class="footer-brand">Thalya Cabana</p><p class="footer-note" data-i18n="footerNote">Cuisine maison face à la mer</p>
+    <div class="footer-links"><span data-i18n="address">Boulevard du Midi · Cannes</span><a href="https://www.instagram.com/kiosque32cannes/" data-i18n-aria="instagramLabel">@kiosque32cannes</a></div>
+  </footer>
+</body>
+</html>

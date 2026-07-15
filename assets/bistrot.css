@@ -1,0 +1,39 @@
+.variant-bistrot { --cream: #f2eee4; --paper: #fffdf7; --forest: #173f35; }
+.variant-bistrot .site-header { color: white; background: var(--forest); }
+.variant-bistrot .brand { color: white; }
+.variant-bistrot .language-button:hover { background: rgba(255,255,255,.12); }
+.variant-bistrot .language-button[aria-pressed="true"] { border-color: white; background: rgba(255,255,255,.15); }
+.variant-bistrot .menu-hero { padding-block: 46px 50px; color: white; background: var(--forest); text-align: left; }
+.variant-bistrot .menu-hero-inner { width: min(1080px, 100%); margin: 0 auto; }
+.variant-bistrot .menu-hero h1 { color: white; font-family: var(--sans); font-size: clamp(3.3rem, 17vw, 8rem); font-weight: 950; line-height: .74; letter-spacing: -.075em; }
+.variant-bistrot .menu-hero-tagline { margin-left: 0; }
+.variant-bistrot .menu-hero-note { color: var(--sage-light); }
+.bistrot-category-nav { position: sticky; top: 0; z-index: 25; border-bottom: 1px solid rgba(23,63,53,.18); background: rgba(242,238,228,.96); box-shadow: 0 7px 18px rgba(23,63,53,.08); backdrop-filter: blur(11px); }
+.bistrot-category-tabs { display: flex; gap: 7px; max-width: 72rem; margin: 0 auto; padding: 8px max(13px,env(safe-area-inset-left)); overflow-x: auto; scrollbar-width: none; }
+.bistrot-category-tabs::-webkit-scrollbar { display: none; }
+.bistrot-category-tab { display: inline-flex; min-height: 44px; flex: 0 0 auto; align-items: center; padding: 8px 13px; border: 1px solid rgba(23,63,53,.3); border-radius: 999px; color: var(--forest); font-size: .78rem; font-weight: 800; line-height: 1.1; text-decoration: none; text-transform: uppercase; white-space: nowrap; }
+.bistrot-category-tab[aria-current="true"] { border-color: var(--forest); color: var(--cream); background: var(--forest); }
+.bistrot-category-tab:focus-visible { outline: 3px solid var(--sage); outline-offset: 2px; }
+.variant-bistrot .menu-shell { padding-top: 24px; }
+.accordion-menu { display: grid; gap: 9px; }
+.menu-accordion { overflow: hidden; border: 2px solid var(--forest); border-radius: 12px; background: var(--paper); scroll-margin-top: 76px; }
+.menu-accordion summary { display: flex; min-height: 68px; align-items: center; gap: 12px; padding: 12px 14px; color: var(--forest); cursor: pointer; list-style: none; }
+.menu-accordion summary::-webkit-details-marker { display: none; }
+.menu-accordion summary:focus-visible { outline: none; box-shadow: inset 0 0 0 3px var(--sage); }
+.menu-accordion summary .section-icon { width: 42px; height: 42px; flex-basis: 42px; padding: 2px; color: var(--forest); }
+.lucide-icon { display: block; background-color: currentColor; -webkit-mask: var(--lucide-icon) center / contain no-repeat; mask: var(--lucide-icon) center / contain no-repeat; }
+.accordion-title { min-width: 0; flex: 1; font-size: clamp(1rem, 5vw, 1.3rem); font-weight: 900; letter-spacing: -.02em; text-transform: uppercase; }
+.accordion-arrow { display: grid; width: 40px; height: 40px; margin-left: auto; flex: 0 0 40px; place-items: center; border-radius: 50%; color: white; background: var(--sage); }
+.accordion-arrow::before { content: ""; width: 20px; height: 20px; background: currentColor; -webkit-mask: url("lucide/chevron-down.svg") center / contain no-repeat; mask: url("lucide/chevron-down.svg") center / contain no-repeat; transition: transform .2s; }
+.menu-accordion[open] .accordion-arrow::before { transform: rotate(180deg); }
+.accordion-content { padding: 0 16px 12px; border-top: 1px solid var(--line); }
+.variant-bistrot .item-name { font-size: .86rem; }
+.variant-bistrot .item-details { font-size: 14px; line-height: 1.5; }
+@media (min-width: 760px) {
+  .bistrot-category-nav { display: none; }
+  .variant-bistrot .menu-shell { padding-top: 24px; }
+  .accordion-menu { display: block; columns: 2; column-gap: 12px; }
+  .menu-static-section { display: inline-block; width: 100%; margin: 0 0 12px; break-inside: avoid; }
+  .bistrot-section-heading { display: flex; min-height: 68px; align-items: center; gap: 12px; padding: 12px 16px; color: var(--forest); }
+  .bistrot-section-heading .section-icon { width: 42px; height: 42px; flex: 0 0 42px; padding: 2px; }
+}
