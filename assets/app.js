@@ -233,9 +233,6 @@
       summary.innerHTML = `${lucideIcon(category.icon)}<span class="accordion-title">${categoryTitle(category)}</span><span class="accordion-arrow" aria-hidden="true"></span>`;
       details.addEventListener("toggle", () => {
         if (!details.open || BISTROT_WIDE_SCREEN.matches) return;
-        root.querySelectorAll(".menu-accordion[open]").forEach((other) => {
-          if (other !== details) other.open = false;
-        });
         setActiveBistrotCategory(category.id);
       });
       details.append(summary, createBistrotContent(category));
