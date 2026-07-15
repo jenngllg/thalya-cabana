@@ -1,7 +1,9 @@
 ---
-title: Thalya Cabana
+title: thalya-cabana
 ---
 
-# Thalya Cabana
+# thalya-cabana
 
-Menu from Kiosk 32 in Cannes (Thalya Cabana)
+This repository publishes the Thalya Cabana menu site through GitHub Pages.
+
+The `docs/` directory is present because the Pages build is configured to use it as the publishing source.
