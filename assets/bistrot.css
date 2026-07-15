@@ -21,7 +21,7 @@
 .menu-accordion summary::-webkit-details-marker { display: none; }
 .menu-accordion summary:focus-visible { outline: none; box-shadow: inset 0 0 0 3px var(--sage); }
 .menu-accordion summary .section-icon { width: 42px; height: 42px; flex-basis: 42px; padding: 2px; color: var(--forest); }
-.lucide-icon { display: block; background-color: currentColor; -webkit-mask: var(--lucide-icon) center / contain no-repeat; mask: var(--lucide-icon) center / contain no-repeat; }
+.variant-bistrot .lucide-icon { display: block; color: var(--forest); background-color: currentColor; -webkit-mask: var(--lucide-icon) center / contain no-repeat; mask: var(--lucide-icon) center / contain no-repeat; }
 .accordion-title { min-width: 0; flex: 1; font-size: clamp(1rem, 5vw, 1.3rem); font-weight: 900; letter-spacing: -.02em; text-transform: uppercase; }
 .accordion-arrow { display: grid; width: 40px; height: 40px; margin-left: auto; flex: 0 0 40px; place-items: center; border-radius: 50%; color: white; background: var(--sage); }
 .accordion-arrow::before { content: ""; width: 20px; height: 20px; background: currentColor; -webkit-mask: url("lucide/chevron-down.svg") center / contain no-repeat; mask: url("lucide/chevron-down.svg") center / contain no-repeat; transition: transform .2s; }
