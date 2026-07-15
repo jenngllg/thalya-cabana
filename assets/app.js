@@ -155,7 +155,6 @@
   function createBistrotContent(category) {
     const content = document.createElement("div");
     content.className = "accordion-content";
-    if (category.subtitleKey) content.innerHTML = `<p class="section-subtitle">${text(category.subtitleKey)}</p>`;
     category.items.forEach((menuItem) => content.appendChild(createItem(menuItem)));
     return content;
   }
@@ -192,6 +191,10 @@
     const isWide = BISTROT_WIDE_SCREEN.matches;
 
     MENU.forEach((category, index) => {
+      const importantNote = category.subtitleKey
+        ? `<span class="bistrot-important-note">${text(category.subtitleKey)}</span>`
+        : "";
+
       if (tabs) {
         const tab = document.createElement("a");
         tab.className = "bistrot-category-tab";
@@ -219,7 +222,7 @@
         section.id = category.id;
         const heading = document.createElement("div");
         heading.className = "bistrot-section-heading";
-        heading.innerHTML = `${lucideIcon(category.icon)}<h2 class="accordion-title">${categoryTitle(category)}</h2>`;
+        heading.innerHTML = `${lucideIcon(category.icon)}<div class="accordion-label"><h2 class="accordion-title">${categoryTitle(category)}</h2>${importantNote}</div>`;
         section.append(heading, createBistrotContent(category));
         root.appendChild(section);
         return;
@@ -230,7 +233,7 @@
       details.id = category.id;
       details.open = index === 0;
       const summary = document.createElement("summary");
-      summary.innerHTML = `${lucideIcon(category.icon)}<span class="accordion-title">${categoryTitle(category)}</span><span class="accordion-arrow" aria-hidden="true"></span>`;
+      summary.innerHTML = `${lucideIcon(category.icon)}<span class="accordion-label"><span class="accordion-title">${categoryTitle(category)}</span>${importantNote}</span><span class="accordion-arrow" aria-hidden="true"></span>`;
       details.addEventListener("toggle", () => {
         if (!details.open || BISTROT_WIDE_SCREEN.matches) return;
         setActiveBistrotCategory(category.id);

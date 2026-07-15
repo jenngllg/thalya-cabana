@@ -22,7 +22,9 @@
 .menu-accordion summary:focus-visible { outline: none; box-shadow: inset 0 0 0 3px var(--sage); }
 .menu-accordion summary .section-icon { width: 42px; height: 42px; flex-basis: 42px; padding: 2px; color: var(--forest); }
 .variant-bistrot .lucide-icon { display: block; color: var(--forest); background-color: currentColor; -webkit-mask: var(--lucide-icon) center / contain no-repeat; mask: var(--lucide-icon) center / contain no-repeat; }
-.accordion-title { min-width: 0; flex: 1; font-size: clamp(1rem, 5vw, 1.3rem); font-weight: 900; letter-spacing: -.02em; text-transform: uppercase; }
+.accordion-label { display: flex; min-width: 0; flex: 1; flex-direction: column; align-items: flex-start; gap: 5px; }
+.accordion-title { min-width: 0; margin: 0; font-size: clamp(1rem, 5vw, 1.3rem); font-weight: 900; line-height: 1.15; letter-spacing: -.02em; text-transform: uppercase; }
+.bistrot-important-note { display: inline-flex; padding: 4px 8px; border-radius: 999px; color: var(--forest); background: var(--sage-light); font-size: .7rem; font-weight: 900; line-height: 1.2; letter-spacing: .07em; text-transform: uppercase; }
 .accordion-arrow { display: grid; width: 40px; height: 40px; margin-left: auto; flex: 0 0 40px; place-items: center; border-radius: 50%; color: white; background: var(--sage); }
 .accordion-arrow::before { content: ""; width: 20px; height: 20px; background: currentColor; -webkit-mask: url("lucide/chevron-down.svg") center / contain no-repeat; mask: url("lucide/chevron-down.svg") center / contain no-repeat; transition: transform .2s; }
 .menu-accordion[open] .accordion-arrow::before { transform: rotate(180deg); }
