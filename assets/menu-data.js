@@ -103,10 +103,10 @@
     {
       id: "boissons-froides", titleKey: "coldDrinks", icon: "cold-drink", compact: true,
       items: [
-        keyed("mineralWater", 200), keyed("sparklingWater", 250), keyed("sodas", 250),
+        keyed("mineralWater", 200, ["volume50cl"]), keyed("sparklingWater", 250, ["volume50cl"]), keyed("sodas", 250, ["volume33cl"]),
         keyed("fruitJuice", 250), keyed("orangeJuice", 450), keyed("smoothie", 600),
         keyed("milkshake", 600), keyed("energyDrink", 500), keyed("coronaDesperados", 400),
-        keyed("beerSelection", 300), keyed("wine25", 300), keyed("wine50", 500), keyed("wine75", 1800)
+        keyed("beerSelection", 300), keyed("wine25", 300, ["volume25cl"]), keyed("wine50", 500, ["volume50cl"]), keyed("wine75", 1800, ["volume75cl"])
       ]
     },
     {

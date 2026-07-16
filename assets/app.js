@@ -7,19 +7,19 @@
   const WIDE_SCREEN = window.matchMedia("(min-width: 760px)");
   const REDUCED_MOTION = window.matchMedia("(prefers-reduced-motion: reduce)");
   const CATEGORY_ICON_MAP = {
-    sandwich: "lucide/sandwich.svg",
-    bowl: "menu-icons/salad.svg",
-    toast: "lucide/hamburger.svg",
-    wrap: "lucide/wheat.svg",
-    panini: "menu-icons/bread.svg",
-    salad: "lucide/salad.svg",
-    fries: "menu-icons/fries.png",
-    plus: "menu-icons/egg.svg",
-    dessert: "lucide/cake-slice.svg",
-    topping: "menu-icons/milk.svg",
-    "hot-drink": "lucide/coffee.svg",
-    "cold-drink": "lucide/cup-soda.svg",
-    breakfast: "lucide/croissant.svg"
+    sandwich: "icons/sandwich.svg",
+    bowl: "icons/bowl.svg",
+    toast: "icons/hamburger.svg",
+    wrap: "icons/wrap.svg",
+    panini: "icons/panini.svg",
+    salad: "icons/salad.svg",
+    fries: "icons/fries.png",
+    plus: "icons/egg.svg",
+    dessert: "icons/cake-slice.svg",
+    topping: "icons/milk.svg",
+    "hot-drink": "icons/coffee.svg",
+    "cold-drink": "icons/cup-soda.svg",
+    breakfast: "icons/croissant.svg"
   };
   const CATEGORY_ORDER = [
     "sandwichs-froids",
