@@ -4,7 +4,6 @@
   const I18N = window.ThalyaI18n;
   const MENU = window.ThalyaMenu || [];
   const STORAGE_KEY = "thalya-cabana-language";
-  const ASSET_VERSION = "20260716-1";
   const WIDE_SCREEN = window.matchMedia("(min-width: 760px)");
   const REDUCED_MOTION = window.matchMedia("(prefers-reduced-motion: reduce)");
   const CATEGORY_ICON_MAP = {
@@ -110,7 +109,7 @@
 
   function categoryIcon(name) {
     const filePath = CATEGORY_ICON_MAP[name] || CATEGORY_ICON_MAP.sandwich;
-    return `<span class="section-icon category-icon" style="--category-icon: url('${filePath}?v=${ASSET_VERSION}')" aria-hidden="true"></span>`;
+    return `<span class="section-icon category-icon" style="--category-icon: url('${filePath}')" aria-hidden="true"></span>`;
   }
 
   function translateStaticPage() {
