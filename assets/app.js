@@ -6,20 +6,20 @@
   const STORAGE_KEY = "thalya-cabana-language";
   const WIDE_SCREEN = window.matchMedia("(min-width: 760px)");
   const REDUCED_MOTION = window.matchMedia("(prefers-reduced-motion: reduce)");
-  const LUCIDE_ICON_MAP = {
-    sandwich: "sandwich",
-    bowl: "soup",
-    toast: "hamburger",
-    wrap: "wheat",
-    panini: "sandwich",
-    salad: "salad",
-    fries: "carrot",
-    plus: "circle-plus",
-    dessert: "cake-slice",
-    topping: "ice-cream-bowl",
-    "hot-drink": "coffee",
-    "cold-drink": "cup-soda",
-    breakfast: "croissant"
+  const CATEGORY_ICON_MAP = {
+    sandwich: "lucide/sandwich.svg",
+    bowl: "menu-icons/salad.svg",
+    toast: "lucide/hamburger.svg",
+    wrap: "lucide/wheat.svg",
+    panini: "menu-icons/bread.svg",
+    salad: "lucide/salad.svg",
+    fries: "menu-icons/fries.png",
+    plus: "menu-icons/egg.svg",
+    dessert: "lucide/cake-slice.svg",
+    topping: "menu-icons/milk.svg",
+    "hot-drink": "lucide/coffee.svg",
+    "cold-drink": "lucide/cup-soda.svg",
+    breakfast: "lucide/croissant.svg"
   };
   const CATEGORY_ORDER = [
     "sandwichs-froids",
@@ -36,22 +36,24 @@
     "boissons-froides",
     "petits-dejeuners"
   ];
-  const WIDE_CATEGORY_GROUPS = [
-    {
-      name: "savoury",
-      columns: [
-        ["sandwichs-froids", "sandwichs-chauds", "panini", "frites"],
-        ["wraps", "bowls", "salades", "toppings-sales"]
-      ]
-    },
-    {
-      name: "sweet",
-      columns: [["desserts"], ["toppings-sucres"]]
-    },
-    {
-      name: "drinks-and-breakfast",
-      columns: [["boissons-chaudes", "petits-dejeuners"], ["boissons-froides"]]
-    }
+  const WIDE_CATEGORY_COLUMNS = [
+    [
+      "sandwichs-froids",
+      "sandwichs-chauds",
+      "panini",
+      "frites",
+      "desserts",
+      "boissons-chaudes",
+      "petits-dejeuners"
+    ],
+    [
+      "wraps",
+      "bowls",
+      "salades",
+      "toppings-sales",
+      "toppings-sucres",
+      "boissons-froides"
+    ]
   ];
   const ORDERED_MENU = CATEGORY_ORDER
     .map((categoryId) => MENU.find((category) => category.id === categoryId))
@@ -105,9 +107,9 @@
     return new Intl.NumberFormat(locale.intl, { style: "currency", currency: "EUR" }).format(cents / 100);
   }
 
-  function lucideIcon(name) {
-    const fileName = LUCIDE_ICON_MAP[name] || "sandwich";
-    return `<span class="section-icon lucide-icon" style="--lucide-icon: url('lucide/${fileName}.svg')" aria-hidden="true"></span>`;
+  function categoryIcon(name) {
+    const filePath = CATEGORY_ICON_MAP[name] || CATEGORY_ICON_MAP.sandwich;
+    return `<span class="section-icon category-icon" style="--category-icon: url('${filePath}')" aria-hidden="true"></span>`;
   }
 
   function translateStaticPage() {
@@ -191,20 +193,17 @@
     root.innerHTML = "";
     if (tabs) tabs.innerHTML = "";
     const isWide = WIDE_SCREEN.matches;
-    const wideGroupContainers = new Map();
+    const wideColumnContainers = new Map();
 
     if (isWide) {
-      WIDE_CATEGORY_GROUPS.forEach((group) => {
-        const container = document.createElement("div");
-        container.className = "menu-category-group";
-        container.dataset.categoryGroup = group.name;
-        root.appendChild(container);
-        group.columns.forEach((categoryIds) => {
-          const column = document.createElement("div");
-          column.className = "menu-category-column";
-          container.appendChild(column);
-          categoryIds.forEach((categoryId) => wideGroupContainers.set(categoryId, column));
-        });
+      const columns = document.createElement("div");
+      columns.className = "menu-category-columns";
+      root.appendChild(columns);
+      WIDE_CATEGORY_COLUMNS.forEach((categoryIds) => {
+        const column = document.createElement("div");
+        column.className = "menu-category-column";
+        columns.appendChild(column);
+        categoryIds.forEach((categoryId) => wideColumnContainers.set(categoryId, column));
       });
     }
 
@@ -240,9 +239,9 @@
         section.id = category.id;
         const heading = document.createElement("div");
         heading.className = "bistrot-section-heading";
-        heading.innerHTML = `${lucideIcon(category.icon)}<div class="accordion-label"><h2 class="accordion-title">${categoryTitle(category)}</h2>${importantNote}</div>`;
+        heading.innerHTML = `${categoryIcon(category.icon)}<div class="accordion-label"><h2 class="accordion-title">${categoryTitle(category)}</h2>${importantNote}</div>`;
         section.append(heading, createCategoryContent(category));
-        (wideGroupContainers.get(category.id) || root).appendChild(section);
+        (wideColumnContainers.get(category.id) || root).appendChild(section);
         return;
       }
 
@@ -251,7 +250,7 @@
       details.id = category.id;
       details.open = index === 0;
       const summary = document.createElement("summary");
-      summary.innerHTML = `${lucideIcon(category.icon)}<span class="accordion-label"><span class="accordion-title">${categoryTitle(category)}</span>${importantNote}</span><span class="accordion-arrow" aria-hidden="true"></span>`;
+      summary.innerHTML = `${categoryIcon(category.icon)}<span class="accordion-label"><span class="accordion-title">${categoryTitle(category)}</span>${importantNote}</span><span class="accordion-arrow" aria-hidden="true"></span>`;
       details.addEventListener("toggle", () => {
         if (details.open && !WIDE_SCREEN.matches) setActiveCategory(category.id);
       });

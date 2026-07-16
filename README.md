@@ -10,7 +10,7 @@ Menu mobile multilingue du kiosque Thalya Cabana à Cannes. Le projet est un sit
 - `assets/app.js` : changement de langue, navigation et rubriques mobiles.
 - `assets/base.css` et `assets/bistrot.css` : styles mobile-first.
 
-Les icônes Lucide sont stockées localement dans `assets/lucide/`. Leur licence ISC est incluse dans `assets/lucide/LICENSE` ; aucun CDN ni paquet à installer n’est utilisé.
+Toutes les icônes sont stockées localement dans `assets/lucide/` et `assets/menu-icons/`. La licence ISC des icônes Lucide est incluse dans `assets/lucide/LICENSE` ; aucun CDN ni paquet à installer n’est utilisé.
 
 ## Prévisualisation locale
 
