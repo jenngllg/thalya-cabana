@@ -56,7 +56,7 @@
     {
       id: "salades", titleKey: "salads", icon: "salad",
       items: [
-        item("Zion", 1200, ["babySpinach", "yuzuTruffle", "parmesan", "kadaif"]),
+        item("Zion", 1200, ["babySpinach", "yuzu", "truffle", "parmesan", "kadaif"]),
         item("Riviera", 1300, ["mixedLeaves", "tuna", "tomatoes", "cucumber", "egg", "olives"]),
         item("César", 1400, ["romaine", "caesarSauce", "crispyChicken", "parmesan", "croutons"])
       ]

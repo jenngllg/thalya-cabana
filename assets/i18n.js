@@ -172,7 +172,7 @@
     cheddarSauce: ["Sauce cheddar", "Cheddar sauce", "Salsa cheddar", "Salsa cheddar", "Соус чеддер", "Cheddar szósz"],
     crispyChicken: ["Poulet croustillant", "Crispy chicken", "Pollo croccante", "Pollo crujiente", "Хрустящая курица", "Ropogós csirke"],
     babySpinach: ["Baby épinards", "Baby spinach", "Spinacini", "Espinacas baby", "Молодой шпинат", "Bébispenót"],
-    yuzuTruffle: ["Yuzu, Truffe", "Yuzu, Truffle", "Yuzu, Tartufo", "Yuzu, Trufa", "Юдзу, Трюфель", "Yuzu, Szarvasgomba"],
+    truffle: ["Truffe", "Truffle", "Tartufo", "Trufa", "Трюфель", "Szarvasgomba"],
     kadaif: ["Kadaïf", "Kadaïf", "Kadaïf", "Kadaïf", "Кадаиф", "Kadaïf"],
     mixedLeaves: ["Mesclun", "Mixed leaves", "Misticanza", "Mezcla de hojas", "Салатный микс", "Salátakeverék"],
     tuna: ["Thon", "Tuna", "Tonno", "Atún", "Тунец", "Tonhal"],
