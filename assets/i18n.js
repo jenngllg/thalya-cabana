@@ -218,10 +218,10 @@
     wine25: ["Vin blanc, rouge ou rosé", "White, red or rosé wine", "Vino bianco, rosso o rosé", "Vino blanco, tinto o rosado", "Белое, красное или розовое вино", "Fehér-, vörös- vagy rozébor"],
     wine50: ["Vin blanc, rouge ou rosé", "White, red or rosé wine", "Vino bianco, rosso o rosé", "Vino blanco, tinto o rosado", "Белое, красное или розовое вино", "Fehér-, vörös- vagy rozébor"],
     wine75: ["Bouteille de vin blanc, rouge ou rosé", "Bottle of white, red or rosé wine", "Bottiglia di vino bianco, rosso o rosé", "Botella de vino blanco, tinto o rosado", "Бутылка белого, красного или розового вина", "Üveg fehér-, vörös- vagy rozébor"],
-    volume25cl: ["25 cl", "25 cl", "25 cl", "25 cl", "25 cl", "25 cl"],
-    volume33cl: ["33 cl", "33 cl", "33 cl", "33 cl", "33 cl", "33 cl"],
-    volume50cl: ["50 cl", "50 cl", "50 cl", "50 cl", "50 cl", "50 cl"],
-    volume75cl: ["75 cl", "75 cl", "75 cl", "75 cl", "75 cl", "75 cl"],
+    volume25cl: "25 cl",
+    volume33cl: "33 cl",
+    volume50cl: "50 cl",
+    volume75cl: "75 cl",
     pastry: ["Viennoiserie", "Pastry", "Lievitato", "Bollería", "Выпечка", "Péksütemény"],
     croissantOrPain: ["Croissant ou pain au chocolat", "Croissant or pain au chocolat", "Croissant o pain au chocolat", "Cruasán o napolitana de chocolate", "Круассан или шоколадная булочка", "Croissant vagy csokoládés péksütemény"],
     acaiOrMatcha: ["Açaï Bowl ou Matcha Bowl", "Açaí Bowl or Matcha Bowl", "Açaí Bowl o Matcha Bowl", "Açaí Bowl o Matcha Bowl", "Боул асаи или матча", "Açaí Bowl vagy Matcha Bowl"]
@@ -229,6 +229,7 @@
 
   const order = ["fr", "en", "it", "es", "ru", "hu"];
   function fromArray(values, language) {
+    if (!Array.isArray(values)) return values;
     return values[order.indexOf(language)] || values[0];
   }
 
