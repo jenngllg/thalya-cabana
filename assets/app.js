@@ -21,6 +21,41 @@
     "cold-drink": "cup-soda",
     breakfast: "croissant"
   };
+  const CATEGORY_ORDER = [
+    "sandwichs-froids",
+    "sandwichs-chauds",
+    "panini",
+    "wraps",
+    "bowls",
+    "salades",
+    "frites",
+    "toppings-sales",
+    "desserts",
+    "toppings-sucres",
+    "boissons-chaudes",
+    "boissons-froides",
+    "petits-dejeuners"
+  ];
+  const WIDE_CATEGORY_GROUPS = [
+    {
+      name: "savoury",
+      columns: [
+        ["sandwichs-froids", "sandwichs-chauds", "panini", "frites"],
+        ["wraps", "bowls", "salades", "toppings-sales"]
+      ]
+    },
+    {
+      name: "sweet",
+      columns: [["desserts"], ["toppings-sucres"]]
+    },
+    {
+      name: "drinks-and-breakfast",
+      columns: [["boissons-chaudes", "petits-dejeuners"], ["boissons-froides"]]
+    }
+  ];
+  const ORDERED_MENU = CATEGORY_ORDER
+    .map((categoryId) => MENU.find((category) => category.id === categoryId))
+    .filter(Boolean);
   const allowedLanguages = I18N.locales.map((locale) => locale.code);
   let language = getSavedLanguage();
   let categoryObserver = null;
@@ -156,8 +191,24 @@
     root.innerHTML = "";
     if (tabs) tabs.innerHTML = "";
     const isWide = WIDE_SCREEN.matches;
+    const wideGroupContainers = new Map();
 
-    MENU.forEach((category, index) => {
+    if (isWide) {
+      WIDE_CATEGORY_GROUPS.forEach((group) => {
+        const container = document.createElement("div");
+        container.className = "menu-category-group";
+        container.dataset.categoryGroup = group.name;
+        root.appendChild(container);
+        group.columns.forEach((categoryIds) => {
+          const column = document.createElement("div");
+          column.className = "menu-category-column";
+          container.appendChild(column);
+          categoryIds.forEach((categoryId) => wideGroupContainers.set(categoryId, column));
+        });
+      });
+    }
+
+    ORDERED_MENU.forEach((category, index) => {
       const importantNote = category.subtitleKey
         ? `<span class="bistrot-important-note">${text(category.subtitleKey)}</span>`
         : "";
@@ -191,7 +242,7 @@
         heading.className = "bistrot-section-heading";
         heading.innerHTML = `${lucideIcon(category.icon)}<div class="accordion-label"><h2 class="accordion-title">${categoryTitle(category)}</h2>${importantNote}</div>`;
         section.append(heading, createCategoryContent(category));
-        root.appendChild(section);
+        (wideGroupContainers.get(category.id) || root).appendChild(section);
         return;
       }
 

@@ -33,8 +33,11 @@
 .variant-bistrot .item-details { font-size: 14px; line-height: 1.5; }
 @media (min-width: 760px) {
   .bistrot-category-nav { display: none; }
-  .accordion-menu { display: block; columns: 2; column-gap: 12px; }
-  .menu-static-section { display: inline-block; width: 100%; margin: 0 0 12px; break-inside: avoid; }
+  .accordion-menu { display: block; }
+  .menu-category-group { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; gap: 12px; margin-bottom: 12px; }
+  .menu-category-group:last-child { margin-bottom: 0; }
+  .menu-category-column { display: grid; align-content: start; gap: 12px; }
+  .menu-static-section { display: block; width: 100%; margin: 0; }
   .bistrot-section-heading { display: flex; min-height: 68px; align-items: center; gap: 12px; padding: 12px 16px; color: var(--forest); }
   .bistrot-section-heading .section-icon { width: 42px; height: 42px; flex: 0 0 42px; padding: 2px; }
 }
