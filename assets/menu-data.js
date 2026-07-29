@@ -29,7 +29,7 @@
       id: "sandwichs-chauds", titleKey: "hotSandwiches", icon: "toast",
       items: [
         item("Cheeseburger", 800),
-        item("Double Cheeseburger", 1100),
+        item("Double Cheeseburger", 1300),
         item("Pita Cabana", 1000, ["tzatziki", "chicken", "redCabbage", "tomatoes", "mint", "pomegranate"]),
         item("Croque Cabana", 1100, ["pistachioPesto", "mortadella", "burrata", "pistachios"]),
         item("Sayolita", 1150, ["truffleCream", "doubleSteak", "mushrooms", "arugula", "cheddar"])
