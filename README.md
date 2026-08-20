@@ -6,7 +6,7 @@ Menu mobile multilingue du kiosque Thalya Cabana à Cannes. Le projet est un sit
 
 - `index.html` : menu Bistrot moderne, page unique du site.
 - `assets/menu-data.js` : catégories, produits et prix.
-- `assets/i18n.js` : interface et traductions en six langues.
+- `assets/i18n.js` : interface et traductions en neuf langues.
 - `assets/app.js` : changement de langue, navigation et rubriques mobiles.
 - `assets/base.css` et `assets/bistrot.css` : styles mobile-first.
 
