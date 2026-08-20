@@ -268,10 +268,10 @@
     wine25: ["Vin blanc, rouge ou rosé", "White, red or rosé wine", "Vino bianco, rosso o rosé", "Vino blanco, tinto o rosado", "Белое, красное или розовое вино", "Fehér-, vörös- vagy rozébor"],
     wine50: ["Vin blanc, rouge ou rosé", "White, red or rosé wine", "Vino bianco, rosso o rosé", "Vino blanco, tinto o rosado", "Белое, красное или розовое вино", "Fehér-, vörös- vagy rozébor"],
     wine75: ["Bouteille de vin blanc, rouge ou rosé", "Bottle of white, red or rosé wine", "Bottiglia di vino bianco, rosso o rosé", "Botella de vino blanco, tinto o rosado", "Бутылка белого, красного или розового вина", "Üveg fehér-, vörös- vagy rozébor"],
-    volume25cl: "25 cl",
-    volume33cl: "33 cl",
-    volume50cl: "50 cl",
-    volume75cl: "75 cl",
+    volume25cl: ["25 cl", "25 cl", "25 cl", "25 cl", "250 мл", "25 cl"],
+    volume33cl: ["33 cl", "33 cl", "33 cl", "33 cl", "330 мл", "33 cl"],
+    volume50cl: ["50 cl", "50 cl", "50 cl", "50 cl", "500 мл", "50 cl"],
+    volume75cl: ["75 cl", "75 cl", "75 cl", "75 cl", "750 мл", "75 cl"],
     pastry: ["Viennoiserie", "Pastry", "Lievitato", "Bollería", "Выпечка", "Péksütemény"],
     croissantOrPain: ["Croissant ou pain au chocolat", "Croissant or pain au chocolat", "Croissant o pain au chocolat", "Cruasán o napolitana de chocolate", "Круассан или шоколадная булочка", "Croissant vagy csokoládés péksütemény"],
     acaiOrMatcha: ["Açaï Bowl ou Matcha Bowl", "Açaí Bowl or Matcha Bowl", "Açaí Bowl o Matcha Bowl", "Açaí Bowl o Matcha Bowl", "Боул асаи или матча", "Açaí Bowl vagy Matcha Bowl"]
@@ -328,7 +328,7 @@
       sparklingWater: "Газована вода", sodas: "Газовані напої", fruitJuice: "Фруктовий сік",
       orangeJuice: "Свіжовичавлений апельсиновий сік", smoothie: "Смузі", milkshake: "Мілкшейк",
       energyDrink: "Енергетичний напій", coronaDesperados: "Корона / Десперадос",
-      beerSelection: "Лефф / Гайнекен / Кроненбург 1664", wine25: "Біле, червоне або рожеве вино",
+      beerSelection: "Лефф / Гайнекен / Кроненбург 1664", volume25cl: "250 мл", volume33cl: "330 мл", volume50cl: "500 мл", volume75cl: "750 мл", wine25: "Біле, червоне або рожеве вино",
       wine50: "Біле, червоне або рожеве вино", wine75: "Пляшка білого, червоного або рожевого вина",
       pastry: "Випічка", croissantOrPain: "Круасан або шоколадна булочка",
       acaiOrMatcha: "Боул асаї або матча"
@@ -361,7 +361,7 @@
       tea: "茶", mineralWater: "矿泉水", sparklingWater: "气泡水", sodas: "汽水",
       fruitJuice: "果汁", orangeJuice: "鲜榨橙汁", smoothie: "果昔", milkshake: "奶昔",
       energyDrink: "能量饮料", coronaDesperados: "科罗娜 / 德斯佩拉多斯",
-      beerSelection: "乐飞 / 喜力 / 凯旋1664", wine25: "白葡萄酒、红葡萄酒或桃红葡萄酒",
+      beerSelection: "乐飞 / 喜力 / 凯旋1664", volume25cl: "250 毫升", volume33cl: "330 毫升", volume50cl: "500 毫升", volume75cl: "750 毫升", wine25: "白葡萄酒、红葡萄酒或桃红葡萄酒",
       wine50: "白葡萄酒、红葡萄酒或桃红葡萄酒", wine75: "一瓶白葡萄酒、红葡萄酒或桃红葡萄酒",
       pastry: "维也纳面包", croissantOrPain: "牛角包或巧克力面包", acaiOrMatcha: "巴西莓碗或抹茶碗"
     },
@@ -396,7 +396,7 @@
       mineralWater: "ミネラルウォーター", sparklingWater: "炭酸水", sodas: "ソフトドリンク",
       fruitJuice: "フルーツジュース", orangeJuice: "フレッシュオレンジジュース",
       smoothie: "スムージー", milkshake: "ミルクシェイク", energyDrink: "エナジードリンク",
-      coronaDesperados: "コロナ / デスペラードス", beerSelection: "レフ / ハイネケン / クローネンブルグ1664",
+      coronaDesperados: "コロナ / デスペラードス", beerSelection: "レフ / ハイネケン / クローネンブルグ1664", volume25cl: "250 ml", volume33cl: "330 ml", volume50cl: "500 ml", volume75cl: "750 ml",
       wine25: "白・赤・ロゼワイン", wine50: "白・赤・ロゼワイン", wine75: "白・赤・ロゼワイン（ボトル）",
       pastry: "ヴィエノワズリー", croissantOrPain: "クロワッサンまたはパン・オ・ショコラ",
       acaiOrMatcha: "アサイーボウルまたは抹茶ボウル"
