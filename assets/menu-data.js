@@ -8,7 +8,7 @@
     {
       id: "sandwichs-froids", titleKey: "coldSandwiches", icon: "sandwich",
       items: [
-        item("Bagnat Cabana", 850, ["painBagnat"]),
+        item("Bagnat Cabana", 850, ["panBagnat", "tuna", "egg", "radish", "tomato", "pepper", "springOnions", "olive", "anchovies"]),
         item("Milos", 900, ["tzatziki", "marinatedChicken", "cucumber", "redOnion", "feta"]),
         item("Saint-Barth", 900, ["caesarSauce", "breadedChicken", "romaine", "tomato", "bacon"]),
         item("Capri", 1100, ["pesto", "tomato", "arugula", "burrata", "basil"]),

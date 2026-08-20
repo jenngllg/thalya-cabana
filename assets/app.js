@@ -91,11 +91,11 @@
   }
 
   function categoryTitle(category) {
-    return I18N.fromArray(I18N.categories[category.titleKey], language);
+    return I18N.category(category.titleKey, language);
   }
 
   function term(key) {
-    return I18N.fromArray(I18N.terms[key], language);
+    return I18N.term(key, language);
   }
 
   function itemName(menuItem) {

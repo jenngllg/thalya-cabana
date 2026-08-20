@@ -94,6 +94,9 @@ button { font: inherit; }
   .footer-links { flex-direction: row; gap: 20px; }
 }
 
+@media (min-width: 720px) {
+  .language-switcher { grid-template-columns: repeat(9, 44px); }
+}
 @media (min-width: 800px) {
   .menu-hero { padding-block: 60px 70px; }
   .menu-hero h1 span { display: inline; }

@@ -7,7 +7,10 @@
     { code: "it", intl: "it-IT", label: "Italiano", flag: "assets/flags/it.svg" },
     { code: "es", intl: "es-ES", label: "Español", flag: "assets/flags/es.svg" },
     { code: "ru", intl: "ru-RU", label: "Русский", flag: "assets/flags/ru.svg" },
-    { code: "hu", intl: "hu-HU", label: "Magyar", flag: "assets/flags/hu.svg" }
+    { code: "hu", intl: "hu-HU", label: "Magyar", flag: "assets/flags/hu.svg" },
+    { code: "uk", intl: "uk-UA", label: "Українська", flag: "assets/flags/uk.svg" },
+    { code: "zh", intl: "zh-CN", label: "中文", flag: "assets/flags/zh.svg" },
+    { code: "ja", intl: "ja-JP", label: "日本語", flag: "assets/flags/ja.svg" }
   ];
 
   const ui = {
@@ -94,6 +97,48 @@
       allOptions: "Minden változat", currentLanguage: "Étlap megjelenítése {language} nyelven", openCategory: "{category} megnyitása",
       skip: "Ugrás a tartalomhoz", languageChoice: "Nyelvválasztás", homeLabel: "Thalya Cabana, kezdőlap", conceptsLabel: "Étlapváltozatok",
       footerNote: "Házi konyha a tengerparton"
+    },
+    uk: {
+      menu: "Меню", madeFresh: "Домашня кухня зі свіжих продуктів", facingSea: "Біля моря", brandLine: "Канни · біля моря",
+      back: "Переглянути всі три концепції", categories: "Категорії", browse: "Переглянути меню",
+      breakfastUntil: "Подається до 11:00", address: "Boulevard du Midi · Канни",
+      instagramLabel: "Thalya Cabana в Instagram", chooseEyebrow: "Три атмосфери, одне меню",
+      chooseTitle: "Оберіть свій стиль Thalya Cabana", chooseIntro: "Три варіанти, створені насамперед для зручного перегляду з телефона просто за столиком.",
+      openVersion: "Переглянути цей варіант", rivieraTitle: "Редакційна Рив’єра",
+      rivieraDesc: "Світле елегантне меню з категоріями, завжди доступними одним дотиком.",
+      bistrotTitle: "Сучасне бістро", bistrotDesc: "Компактне й зрозуміле меню зі згортними розділами для швидкого вибору.",
+      illustratedTitle: "Ілюстроване меню", illustratedDesc: "Теплий виразний варіант з оригінальними гастрономічними ілюстраціями.",
+      allOptions: "Усі варіанти", currentLanguage: "Показати меню мовою: {language}", openCategory: "Відкрити розділ «{category}»",
+      skip: "Перейти до вмісту", languageChoice: "Вибір мови", homeLabel: "Thalya Cabana, головна", conceptsLabel: "Варіанти меню",
+      footerNote: "Домашня кухня біля моря"
+    },
+    zh: {
+      menu: "菜单", madeFresh: "家制美食与新鲜食材", facingSea: "面朝大海", brandLine: "戛纳 · 面朝大海",
+      back: "查看三种方案", categories: "分类", browse: "浏览菜单",
+      breakfastUntil: "供应至11:00", address: "Boulevard du Midi · 戛纳",
+      instagramLabel: "Thalya Cabana 的 Instagram", chooseEyebrow: "三种风格，同一份菜单",
+      chooseTitle: "选择你的 Thalya Cabana", chooseIntro: "三种优先适配手机的方案，让你在餐桌旁轻松浏览。",
+      openVersion: "查看此方案", rivieraTitle: "蔚蓝海岸编辑风",
+      rivieraDesc: "明亮优雅的菜单，分类标签始终触手可及。",
+      bistrotTitle: "现代小酒馆", bistrotDesc: "紧凑直观的布局，折叠分类便于快速选择。",
+      illustratedTitle: "插画菜单", illustratedDesc: "温暖而富有表现力的方案，配以原创美食插画。",
+      allOptions: "所有方案", currentLanguage: "以{language}显示菜单", openCategory: "打开“{category}”",
+      skip: "跳至主要内容", languageChoice: "选择语言", homeLabel: "Thalya Cabana，主页", conceptsLabel: "菜单方案",
+      footerNote: "海边家常美食"
+    },
+    ja: {
+      menu: "メニュー", madeFresh: "自家製・新鮮な食材", facingSea: "海を望む", brandLine: "カンヌ · 海を望む",
+      back: "3つの案を見る", categories: "カテゴリー", browse: "メニューを見る",
+      breakfastUntil: "11時まで提供", address: "Boulevard du Midi · カンヌ",
+      instagramLabel: "Thalya CabanaのInstagram", chooseEyebrow: "3つの雰囲気、1つのメニュー",
+      chooseTitle: "お好みのThalya Cabanaを選ぶ", chooseIntro: "テーブルでスマートフォンから快適に見られる、モバイル優先の3つのデザインです。",
+      openVersion: "この案を見る", rivieraTitle: "リヴィエラ・エディトリアル",
+      rivieraDesc: "明るく上品で、カテゴリーにすぐアクセスできるメニューです。",
+      bistrotTitle: "モダン・ビストロ", bistrotDesc: "折りたたみ式カテゴリーで素早く選べる、コンパクトで分かりやすい構成です。",
+      illustratedTitle: "イラストメニュー", illustratedDesc: "オリジナルの料理イラストを使った、温かみのある表情豊かなデザインです。",
+      allOptions: "すべての案", currentLanguage: "{language}でメニューを表示", openCategory: "「{category}」を開く",
+      skip: "本文へ移動", languageChoice: "言語を選択", homeLabel: "Thalya Cabana、ホーム", conceptsLabel: "メニュー案",
+      footerNote: "海辺の自家製料理"
     }
   };
 
@@ -114,7 +159,6 @@
   };
 
   const terms = {
-    painBagnat: ["Pain bagnat", "Bagnat bread", "Pane bagnat", "Pan bagnat", "Хлеб банья", "Bagnat kenyér"],
     tzatziki: ["Tzatziki", "Tzatziki", "Tzatziki", "Tzatziki", "Дзадзики", "Tzatziki"],
     marinatedChicken: ["Poulet mariné", "Marinated chicken", "Pollo marinato", "Pollo marinado", "Маринованная курица", "Pácolt csirke"],
     chicken: ["Poulet", "Chicken", "Pollo", "Pollo", "Курица", "Csirke"],
@@ -178,6 +222,12 @@
     tuna: ["Thon", "Tuna", "Tonno", "Atún", "Тунец", "Tonhal"],
     egg: ["Œuf", "Egg", "Uovo", "Huevo", "Яйцо", "Tojás"],
     olives: ["Olives", "Olives", "Olive", "Aceitunas", "Оливки", "Olajbogyó"],
+    panBagnat: ["Pan Bagnat", "Pan Bagnat", "Pan Bagnat", "Pan Bagnat", "Пан банья", "Pan Bagnat"],
+    radish: ["Radis", "Radish", "Ravanello", "Rábano", "Редис", "Retek"],
+    pepper: ["Poivron", "Bell pepper", "Peperone", "Pimiento", "Перец", "Paprika"],
+    springOnions: ["Cébettes", "Spring onions", "Cipollotti", "Cebolletas", "Зелёный лук", "Újhagyma"],
+    olive: ["Olive", "Olive", "Oliva", "Aceituna", "Оливка", "Olajbogyó"],
+    anchovies: ["Anchois", "Anchovies", "Acciughe", "Anchoas", "Анчоусы", "Szardella"],
     sweetPotato: ["Patate douce", "Sweet potato", "Patata dolce", "Boniato", "Батат", "Édesburgonya"],
     fries: ["Frites", "Fries", "Patatine fritte", "Patatas fritas", "Картофель фри", "Hasábburgonya"],
     chickenCrispy: ["Chicken crispy", "Crispy chicken", "Pollo croccante", "Pollo crujiente", "Хрустящая курица", "Ropogós csirke"],
@@ -227,11 +277,145 @@
     acaiOrMatcha: ["Açaï Bowl ou Matcha Bowl", "Açaí Bowl or Matcha Bowl", "Açaí Bowl o Matcha Bowl", "Açaí Bowl o Matcha Bowl", "Боул асаи или матча", "Açaí Bowl vagy Matcha Bowl"]
   };
 
+  const additionalCategories = {
+    uk: {
+      coldSandwiches: "Холодні сендвічі", bowls: "Боули", hotSandwiches: "Гарячі сендвічі", wraps: "Роли",
+      panini: "Паніні", salads: "Салати", fries: "Смажені закуски", savouryToppings: "Солоні додатки",
+      desserts: "Десерти", sweetToppings: "Солодкі топінги", hotDrinks: "Гарячі напої",
+      coldDrinks: "Холодні напої", breakfasts: "Сніданки"
+    },
+    zh: {
+      coldSandwiches: "冷三明治", bowls: "碗餐", hotSandwiches: "热三明治", wraps: "卷饼",
+      panini: "帕尼尼", salads: "沙拉", fries: "炸物", savouryToppings: "咸味加料",
+      desserts: "甜点", sweetToppings: "甜味加料", hotDrinks: "热饮",
+      coldDrinks: "冷饮", breakfasts: "早餐"
+    },
+    ja: {
+      coldSandwiches: "冷製サンドイッチ", bowls: "ボウル", hotSandwiches: "ホットサンド", wraps: "ラップ",
+      panini: "パニーニ", salads: "サラダ", fries: "フライ", savouryToppings: "塩味トッピング",
+      desserts: "デザート", sweetToppings: "スイートトッピング", hotDrinks: "ホットドリンク",
+      coldDrinks: "コールドドリンク", breakfasts: "朝食"
+    }
+  };
+
+  const additionalTerms = {
+    uk: {
+      tzatziki: "Дзадзикі", marinatedChicken: "Маринована курка", chicken: "Курка", cucumber: "Огірок",
+      redOnion: "Червона цибуля", feta: "Фета", caesarSauce: "Соус «Цезар»", breadedChicken: "Курка в паніровці",
+      romaine: "Салат ромен", tomato: "Помідор", tomatoes: "Помідори", bacon: "Бекон", pesto: "Песто",
+      arugula: "Рукола", burrata: "Бурата", basil: "Базилік", curedHam: "Сиров’ялена шинка",
+      sunDriedTomatoes: "В’ялені помідори", choiceTopping: "Топінг на вибір", matchaCream: "Крем матча",
+      granola: "Гранола", mango: "Манго", coconut: "Кокос", honey: "Мед", acaiBase: "Основа асаї",
+      redBerries: "Червоні ягоди", banana: "Банан", chia: "Насіння чіа", roastedTomatoes: "Запечені помідори",
+      croutons: "Грінки", quinoa: "Кіноа", grilledChicken: "Курка-гриль", avocado: "Авокадо",
+      edamame: "Едамаме", pumpkinSeeds: "Гарбузове насіння", redCabbage: "Червонокачанна капуста",
+      mint: "М’ята", pomegranate: "Гранат", pistachioPesto: "Фісташковий песто", mortadella: "Мортадела",
+      pistachios: "Фісташки", truffleCream: "Трюфельний крем", doubleSteak: "Подвійна котлета",
+      mushrooms: "Гриби", cheddar: "Чедер", parmesan: "Пармезан", yuzu: "Юдзу", spinach: "Шпинат",
+      seeds: "Насіння", creamCheese: "Вершковий сир", smokedSalmon: "Копчений лосось",
+      mozzarella: "Моцарела", goatCheese: "Козячий сир", emmental: "Ементаль", cheddarSauce: "Соус чедер",
+      crispyChicken: "Хрустка курка", babySpinach: "Молодий шпинат", truffle: "Трюфель", kadaif: "Кадаїф",
+      mixedLeaves: "Салатний мікс", tuna: "Тунець", egg: "Яйце", olives: "Оливки",
+      panBagnat: "Pan Bagnat", radish: "Редис", pepper: "Перець", springOnions: "Зелена цибуля",
+      olive: "Оливка", anchovies: "Анчоуси", sweetPotato: "Батат", fries: "Картопля фрі",
+      chickenCrispy: "Хрустка курка", sugarCrepe: "Млинець із цукром", nutellaCrepe: "Млинець із Nutella",
+      granita: "Граніта", mochis: "Моті ×2", nutellaPanini: "Паніні з Nutella", lemonTart: "Лимонний тарт",
+      raspberryTart: "Малиновий тарт", tiramisu: "Тирамісу", vanilla: "Ваніль", speculoos: "Спекулос",
+      pistachio: "Фісташка", whippedCream: "Збиті вершки", nutella: "Nutella", fruitCoulis: "Фруктовий кулі",
+      plantMilk: "Рослинне молоко", espresso: "Еспресо", doubleEspresso: "Подвійний еспресо",
+      macchiato: "Макіато", hotChocolate: "Гарячий шоколад", latte: "Лате", cappuccino: "Капучино",
+      matchaLatte: "Матча-лате", chaiLatte: "Чай-лате", tea: "Чай", mineralWater: "Мінеральна вода",
+      sparklingWater: "Газована вода", sodas: "Газовані напої", fruitJuice: "Фруктовий сік",
+      orangeJuice: "Свіжовичавлений апельсиновий сік", smoothie: "Смузі", milkshake: "Мілкшейк",
+      energyDrink: "Енергетичний напій", coronaDesperados: "Corona / Desperados",
+      beerSelection: "Leffe / Heineken / 1664", wine25: "Біле, червоне або рожеве вино",
+      wine50: "Біле, червоне або рожеве вино", wine75: "Пляшка білого, червоного або рожевого вина",
+      pastry: "Випічка", croissantOrPain: "Круасан або шоколадна булочка",
+      acaiOrMatcha: "Боул асаї або матча"
+    },
+    zh: {
+      tzatziki: "酸奶黄瓜酱", marinatedChicken: "腌鸡肉", chicken: "鸡肉", cucumber: "黄瓜", redOnion: "红洋葱",
+      feta: "菲达奶酪", caesarSauce: "凯撒酱", breadedChicken: "炸鸡排", romaine: "罗马生菜",
+      tomato: "番茄", tomatoes: "番茄", bacon: "培根", pesto: "青酱", arugula: "芝麻菜",
+      burrata: "布拉塔奶酪", basil: "罗勒", curedHam: "风干火腿", sunDriedTomatoes: "油渍番茄",
+      choiceTopping: "自选加料", matchaCream: "抹茶奶油", granola: "格兰诺拉麦片", mango: "芒果",
+      coconut: "椰子", honey: "蜂蜜", acaiBase: "巴西莓基底", redBerries: "红色莓果", banana: "香蕉",
+      chia: "奇亚籽", roastedTomatoes: "烤番茄", croutons: "面包丁", quinoa: "藜麦",
+      grilledChicken: "烤鸡肉", avocado: "牛油果", edamame: "毛豆", pumpkinSeeds: "南瓜籽",
+      redCabbage: "紫甘蓝", mint: "薄荷", pomegranate: "石榴", pistachioPesto: "开心果青酱",
+      mortadella: "意式摩泰台拉香肠", pistachios: "开心果", truffleCream: "松露奶油",
+      doubleSteak: "双层牛肉饼", mushrooms: "蘑菇", cheddar: "切达奶酪", parmesan: "帕玛森奶酪",
+      yuzu: "柚子", spinach: "菠菜", seeds: "籽", creamCheese: "奶油奶酪", smokedSalmon: "烟熏三文鱼",
+      mozzarella: "马苏里拉奶酪", goatCheese: "山羊奶酪", emmental: "埃门塔尔奶酪",
+      cheddarSauce: "切达奶酪酱", crispyChicken: "香脆鸡肉", babySpinach: "嫩菠菜",
+      truffle: "松露", kadaif: "卡达伊夫酥丝", mixedLeaves: "混合生菜", tuna: "金枪鱼", egg: "鸡蛋",
+      olives: "橄榄", panBagnat: "Pan Bagnat", radish: "小萝卜", pepper: "甜椒",
+      springOnions: "小葱", olive: "橄榄", anchovies: "凤尾鱼", sweetPotato: "红薯", fries: "炸薯条",
+      chickenCrispy: "香脆鸡肉", sugarCrepe: "砂糖可丽饼", nutellaCrepe: "Nutella可丽饼",
+      granita: "格兰尼塔冰沙", mochis: "麻薯 ×2", nutellaPanini: "Nutella帕尼尼",
+      lemonTart: "柠檬挞", raspberryTart: "覆盆子挞", tiramisu: "提拉米苏", vanilla: "香草",
+      speculoos: "焦糖饼干", pistachio: "开心果", whippedCream: "打发奶油", nutella: "Nutella",
+      fruitCoulis: "水果酱", plantMilk: "植物奶", espresso: "浓缩咖啡",
+      doubleEspresso: "双份浓缩咖啡", macchiato: "玛奇朵", hotChocolate: "热巧克力",
+      latte: "拿铁", cappuccino: "卡布奇诺", matchaLatte: "抹茶拿铁", chaiLatte: "香料茶拿铁",
+      tea: "茶", mineralWater: "矿泉水", sparklingWater: "气泡水", sodas: "汽水",
+      fruitJuice: "果汁", orangeJuice: "鲜榨橙汁", smoothie: "果昔", milkshake: "奶昔",
+      energyDrink: "能量饮料", coronaDesperados: "Corona / Desperados",
+      beerSelection: "Leffe / Heineken / 1664", wine25: "白葡萄酒、红葡萄酒或桃红葡萄酒",
+      wine50: "白葡萄酒、红葡萄酒或桃红葡萄酒", wine75: "一瓶白葡萄酒、红葡萄酒或桃红葡萄酒",
+      pastry: "维也纳面包", croissantOrPain: "牛角包或巧克力面包", acaiOrMatcha: "巴西莓碗或抹茶碗"
+    },
+    ja: {
+      tzatziki: "ザジキ", marinatedChicken: "マリネチキン", chicken: "チキン", cucumber: "キュウリ",
+      redOnion: "赤玉ネギ", feta: "フェタチーズ", caesarSauce: "シーザーソース",
+      breadedChicken: "パン粉付きチキン", romaine: "ロメインレタス", tomato: "トマト", tomatoes: "トマト",
+      bacon: "ベーコン", pesto: "ペスト", arugula: "ルッコラ", burrata: "ブッラータ", basil: "バジル",
+      curedHam: "生ハム", sunDriedTomatoes: "セミドライトマト", choiceTopping: "トッピングを選択",
+      matchaCream: "抹茶クリーム", granola: "グラノーラ", mango: "マンゴー", coconut: "ココナッツ",
+      honey: "はちみつ", acaiBase: "アサイーベース", redBerries: "赤いベリー", banana: "バナナ",
+      chia: "チアシード", roastedTomatoes: "ローストトマト", croutons: "クルトン", quinoa: "キヌア",
+      grilledChicken: "グリルチキン", avocado: "アボカド", edamame: "枝豆", pumpkinSeeds: "かぼちゃの種",
+      redCabbage: "紫キャベツ", mint: "ミント", pomegranate: "ザクロ", pistachioPesto: "ピスタチオペスト",
+      mortadella: "モルタデッラ", pistachios: "ピスタチオ", truffleCream: "トリュフクリーム",
+      doubleSteak: "ビーフパティ2枚", mushrooms: "マッシュルーム", cheddar: "チェダー",
+      parmesan: "パルメザン", yuzu: "柚子", spinach: "ほうれん草", seeds: "シード",
+      creamCheese: "クリームチーズ", smokedSalmon: "スモークサーモン", mozzarella: "モッツァレラ",
+      goatCheese: "山羊チーズ", emmental: "エメンタール", cheddarSauce: "チェダーソース",
+      crispyChicken: "クリスピーチキン", babySpinach: "ベビーほうれん草", truffle: "トリュフ",
+      kadaif: "カダイフ", mixedLeaves: "ミックスリーフ", tuna: "ツナ", egg: "卵", olives: "オリーブ",
+      panBagnat: "Pan Bagnat", radish: "ラディッシュ", pepper: "ピーマン", springOnions: "青ネギ",
+      olive: "オリーブ", anchovies: "アンチョビ", sweetPotato: "サツマイモ", fries: "フライドポテト",
+      chickenCrispy: "クリスピーチキン", sugarCrepe: "シュガークレープ",
+      nutellaCrepe: "ヌテラクレープ", granita: "グラニータ", mochis: "もち ×2",
+      nutellaPanini: "ヌテラパニーニ", lemonTart: "レモンタルト", raspberryTart: "ラズベリータルト",
+      tiramisu: "ティラミス", vanilla: "バニラ", speculoos: "スペキュロス", pistachio: "ピスタチオ",
+      whippedCream: "ホイップクリーム", nutella: "ヌテラ", fruitCoulis: "フルーツクーリ",
+      plantMilk: "植物性ミルク", espresso: "エスプレッソ", doubleEspresso: "ダブルエスプレッソ",
+      macchiato: "マキアート", hotChocolate: "ホットチョコレート", latte: "ラテ",
+      cappuccino: "カプチーノ", matchaLatte: "抹茶ラテ", chaiLatte: "チャイラテ", tea: "紅茶",
+      mineralWater: "ミネラルウォーター", sparklingWater: "炭酸水", sodas: "ソフトドリンク",
+      fruitJuice: "フルーツジュース", orangeJuice: "フレッシュオレンジジュース",
+      smoothie: "スムージー", milkshake: "ミルクシェイク", energyDrink: "エナジードリンク",
+      coronaDesperados: "Corona / Desperados", beerSelection: "Leffe / Heineken / 1664",
+      wine25: "白・赤・ロゼワイン", wine50: "白・赤・ロゼワイン", wine75: "白・赤・ロゼワイン（ボトル）",
+      pastry: "ヴィエノワズリー", croissantOrPain: "クロワッサンまたはパン・オ・ショコラ",
+      acaiOrMatcha: "アサイーボウルまたは抹茶ボウル"
+    }
+  };
   const order = ["fr", "en", "it", "es", "ru", "hu"];
   function fromArray(values, language) {
     if (!Array.isArray(values)) return values;
     return values[order.indexOf(language)] || values[0];
   }
 
-  window.ThalyaI18n = { locales, ui, categories, terms, fromArray };
+  function category(key, language) {
+    return (additionalCategories[language] && additionalCategories[language][key]) || fromArray(categories[key], language);
+  }
+
+  function term(key, language) {
+    if (!Array.isArray(terms[key])) return terms[key];
+    return (additionalTerms[language] && additionalTerms[language][key]) || fromArray(terms[key], language);
+  }
+
+  window.ThalyaI18n = { locales, ui, categories, terms, fromArray, category, term };
 })();
