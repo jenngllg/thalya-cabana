@@ -4,8 +4,9 @@
   const locales = [
     { code: "fr", intl: "fr-FR", label: "Français", flag: "assets/flags/fr.svg" },
     { code: "en", intl: "en-GB", label: "English", flag: "assets/flags/en.svg" },
-    { code: "it", intl: "it-IT", label: "Italiano", flag: "assets/flags/it.svg" },
     { code: "es", intl: "es-ES", label: "Español", flag: "assets/flags/es.svg" },
+    { code: "it", intl: "it-IT", label: "Italiano", flag: "assets/flags/it.svg" },
+    { code: "de", intl: "de-DE", label: "Deutsch", flag: "assets/flags/de.svg" },
     { code: "ru", intl: "ru-RU", label: "Русский", flag: "assets/flags/ru.svg" },
     { code: "hu", intl: "hu-HU", label: "Magyar", flag: "assets/flags/hu.svg" },
     { code: "uk", intl: "uk-UA", label: "Українська", flag: "assets/flags/uk.svg" },
@@ -69,6 +70,20 @@
       allOptions: "Todas las propuestas", currentLanguage: "Mostrar la carta en {language}", openCategory: "Abrir {category}",
       skip: "Ir al contenido", languageChoice: "Elegir idioma", homeLabel: "Thalya Cabana, inicio", conceptsLabel: "Propuestas de carta",
       footerNote: "Cocina casera frente al mar"
+    },
+    de: {
+      menu: "Speisekarte", madeFresh: "Hausgemacht & frische Produkte", facingSea: "Direkt am Meer", brandLine: "Cannes · direkt am Meer",
+      back: "Alle drei Entwürfe ansehen", categories: "Kategorien", browse: "Speisekarte ansehen",
+      breakfastUntil: "Serviert bis 11 Uhr", address: "Boulevard du Midi · Cannes",
+      instagramLabel: "Thalya Cabana auf Instagram", chooseEyebrow: "Drei Stimmungen, eine Speisekarte",
+      chooseTitle: "Wähle dein Thalya Cabana", chooseIntro: "Drei für Smartphones optimierte Entwürfe, die sich direkt am Tisch bequem ansehen lassen.",
+      openVersion: "Diesen Entwurf ansehen", rivieraTitle: "Editorial Riviera",
+      rivieraDesc: "Eine helle, elegante Speisekarte mit Kategorien, die immer in Daumenreichweite bleiben.",
+      bistrotTitle: "Modernes Bistro", bistrotDesc: "Eine kompakte, direkte Darstellung mit aufklappbaren Bereichen für eine schnelle Auswahl.",
+      illustratedTitle: "Illustrierte Speisekarte", illustratedDesc: "Ein warmer, ausdrucksstarker Entwurf mit originellen kulinarischen Illustrationen.",
+      allOptions: "Alle Entwürfe", currentLanguage: "Speisekarte auf {language} anzeigen", openCategory: "Kategorie {category} öffnen",
+      skip: "Zum Inhalt springen", languageChoice: "Sprache auswählen", homeLabel: "Thalya Cabana, Startseite", conceptsLabel: "Speisekartenentwürfe",
+      footerNote: "Hausgemachte Küche direkt am Meer"
     },
     ru: {
       menu: "Меню", madeFresh: "Домашняя кухня из свежих продуктов", facingSea: "У самого моря", brandLine: "Канны · у самого моря",
@@ -278,6 +293,12 @@
   };
 
   const additionalCategories = {
+    de: {
+      coldSandwiches: "Kalte Sandwiches", bowls: "Bowls", hotSandwiches: "Warme Sandwiches", wraps: "Wraps",
+      panini: "Panini", salads: "Salate", fries: "Pommes", savouryToppings: "Herzhafte Extras",
+      desserts: "Desserts", sweetToppings: "Süße Extras", hotDrinks: "Heißgetränke",
+      coldDrinks: "Kaltgetränke", breakfasts: "Frühstück"
+    },
     uk: {
       coldSandwiches: "Холодні сендвічі", bowls: "Боули", hotSandwiches: "Гарячі сендвічі", wraps: "Роли",
       panini: "Паніні", salads: "Салати", fries: "Смажені закуски", savouryToppings: "Солоні додатки",
@@ -299,6 +320,40 @@
   };
 
   const additionalTerms = {
+    de: {
+      tzatziki: "Tzatziki", marinatedChicken: "Mariniertes Hähnchen", chicken: "Hähnchen", cucumber: "Gurke",
+      redOnion: "Rote Zwiebel", feta: "Feta", caesarSauce: "Caesar-Dressing", breadedChicken: "Paniertes Hähnchen",
+      romaine: "Römersalat", tomato: "Tomate", tomatoes: "Tomaten", bacon: "Bacon", pesto: "Pesto",
+      arugula: "Rucola", burrata: "Burrata", basil: "Basilikum", curedHam: "Rohschinken",
+      sunDriedTomatoes: "Konfierte Tomaten", choiceTopping: "Topping nach Wahl", matchaCream: "Matcha-Creme",
+      granola: "Granola", mango: "Mango", coconut: "Kokos", honey: "Honig", acaiBase: "Açaí-Basis",
+      redBerries: "Rote Beeren", banana: "Banane", chia: "Chiasamen", roastedTomatoes: "Geröstete Tomaten",
+      croutons: "Croutons", quinoa: "Quinoa", grilledChicken: "Gegrilltes Hähnchen", avocado: "Avocado",
+      edamame: "Edamame", pumpkinSeeds: "Kürbiskerne", redCabbage: "Rotkohl",
+      mint: "Minze", pomegranate: "Granatapfel", pistachioPesto: "Pistazienpesto", mortadella: "Mortadella",
+      pistachios: "Pistazien", truffleCream: "Trüffelcreme", doubleSteak: "Doppeltes Rindfleisch-Patty",
+      mushrooms: "Champignons", cheddar: "Cheddar", parmesan: "Parmesan", yuzu: "Yuzu", spinach: "Spinat",
+      seeds: "Saaten", creamCheese: "Frischkäse", smokedSalmon: "Räucherlachs",
+      mozzarella: "Mozzarella", goatCheese: "Ziegenkäse", emmental: "Emmentaler", cheddarSauce: "Cheddar-Sauce",
+      crispyChicken: "Knuspriges Hähnchen", babySpinach: "Babyspinat", truffle: "Trüffel", kadaif: "Kadayif",
+      mixedLeaves: "Gemischte Blattsalate", tuna: "Thunfisch", egg: "Ei", olives: "Oliven",
+      panBagnat: "Pan Bagnat", radish: "Radieschen", pepper: "Paprika", springOnions: "Frühlingszwiebeln",
+      olive: "Olive", anchovies: "Sardellen", sweetPotato: "Süßkartoffel", fries: "Pommes",
+      chickenCrispy: "Knuspriges Hähnchen", sugarCrepe: "Crêpe mit Zucker", nutellaCrepe: "Crêpe mit Nutella",
+      granita: "Granita", mochis: "Mochi ×2", nutellaPanini: "Panini mit Nutella", lemonTart: "Zitronentarte",
+      raspberryTart: "Himbeertarte", tiramisu: "Tiramisu", vanilla: "Vanille", speculoos: "Spekulatius",
+      pistachio: "Pistazie", whippedCream: "Schlagsahne", nutella: "Nutella", fruitCoulis: "Fruchtcoulis",
+      plantMilk: "Pflanzenmilch", espresso: "Espresso", doubleEspresso: "Doppelter Espresso",
+      macchiato: "Macchiato", hotChocolate: "Heiße Schokolade", latte: "Latte", cappuccino: "Cappuccino",
+      matchaLatte: "Matcha Latte", chaiLatte: "Chai Latte", tea: "Tee", mineralWater: "Stilles Wasser",
+      sparklingWater: "Sprudelwasser", sodas: "Softdrinks", fruitJuice: "Fruchtsaft",
+      orangeJuice: "Frisch gepresster Orangensaft", smoothie: "Smoothie", milkshake: "Milkshake",
+      energyDrink: "Energy-Drink", coronaDesperados: "Corona / Desperados",
+      beerSelection: "Leffe / Heineken / 1664", volume25cl: "0,25 l", volume33cl: "0,33 l", volume50cl: "0,5 l", volume75cl: "0,75 l",
+      wine25: "Weiß-, Rot- oder Roséwein", wine50: "Weiß-, Rot- oder Roséwein", wine75: "Flasche Weiß-, Rot- oder Roséwein",
+      pastry: "Gebäck", croissantOrPain: "Croissant oder Pain au chocolat",
+      acaiOrMatcha: "Açaí Bowl oder Matcha Bowl"
+    },
     uk: {
       tzatziki: "Дзадзикі", marinatedChicken: "Маринована курка", chicken: "Курка", cucumber: "Огірок",
       redOnion: "Червона цибуля", feta: "Фета", caesarSauce: "Соус «Цезар»", breadedChicken: "Курка в паніровці",
