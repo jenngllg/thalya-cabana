@@ -85,17 +85,21 @@ button { font: inherit; }
   .language-button { width: 40px; height: 44px; }
 }
 
+@media (min-width: 360px) {
+  .language-switcher { grid-template-columns: repeat(4, 44px); }
+}
+
 @media (min-width: 560px) {
   .site-header { align-items: center; padding-inline: 24px; }
   .brand { flex-basis: 220px; }
   .brand strong { line-height: 1; }
-  .language-switcher { grid-template-columns: repeat(6, 44px); }
+  .language-switcher { grid-template-columns: repeat(5, 44px); }
   .menu-shell { padding-inline: 24px; }
   .footer-links { flex-direction: row; gap: 20px; }
 }
 
-@media (min-width: 720px) {
-  .language-switcher { grid-template-columns: repeat(9, 44px); }
+@media (min-width: 760px) {
+  .language-switcher { grid-template-columns: repeat(10, 44px); }
 }
 @media (min-width: 800px) {
   .menu-hero { padding-block: 60px 70px; }
